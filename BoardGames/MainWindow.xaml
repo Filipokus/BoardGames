@@ -1,0 +1,38 @@
+﻿<Window x:Class="BoardGames.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BoardGames"
+        mc:Ignorable="d"
+        Title="Brädspelsbanken" Height="450" Width="800">
+    <Grid>
+        <Label Content="Spelets namn" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbGameName"  HorizontalAlignment="Left" Height="23" Margin="10,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
+        <Label Content="Antal spelare" HorizontalAlignment="Left" Margin="96,39,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbNumberOfPlayers"  HorizontalAlignment="Left" Height="23" Margin="96,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79"/>
+        <Button x:Name="btnAddGame" Content="Lägg till spel" HorizontalAlignment="Left" Margin="54,105,0,0" VerticalAlignment="Top" Width="165" Click="BtnAddGame_Click"/>
+        <ComboBox x:Name="cbxGameOwner" HorizontalAlignment="Left" Margin="180,70,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label Content="Spelets ägare" HorizontalAlignment="Left" Margin="180,39,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label Content="Lägg till nytt spel" HorizontalAlignment="Left" Margin="58,2,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Lista på relevanta spel" HorizontalAlignment="Left" Margin="447,2,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <ListBox x:Name="lbxRelevantGames" HorizontalAlignment="Left" Height="143" Margin="376,44,0,0" VerticalAlignment="Top" Width="342"/>
+        <Label Content="Hur många ska spela?" HorizontalAlignment="Left" Margin="24,187,0,0" VerticalAlignment="Top"/>
+        <Label Content="Sortera spelbara spel" HorizontalAlignment="Left" Margin="42,150,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txbNumberOfActualPlayers" HorizontalAlignment="Left" Height="22" Margin="24,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Vilkas spel är tillgängliga?" HorizontalAlignment="Left" Margin="180,187,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbxEveryone" Content="Allas" HorizontalAlignment="Left" Margin="180,218,0,0" VerticalAlignment="Top" Checked="cbxEveryone_Checked"/>
+        <CheckBox x:Name="cbxAlice" Content="Alices" HorizontalAlignment="Left" Margin="180,239,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <CheckBox x:Name="cbxDogge" Content="Dogges" HorizontalAlignment="Left" Margin="257,218,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <CheckBox x:Name="cbxGherald" Content="Gheralds" HorizontalAlignment="Left" Margin="257,239,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <CheckBox x:Name="cbxOlivia" Content="Olivias" HorizontalAlignment="Left" Margin="180,260,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <CheckBox x:Name="cbxRuna" Content="Runas" HorizontalAlignment="Left" Margin="257,260,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <CheckBox x:Name="cbxSly"  Content="Slys" HorizontalAlignment="Left" Margin="180,281,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <CheckBox x:Name="cbxTim" Content="Tims" HorizontalAlignment="Left" Margin="257,281,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <Button x:Name="btnFilterGames" Content="Visa spelbara spel" HorizontalAlignment="Left" Margin="24,240,0,0" VerticalAlignment="Top" Width="120" Height="57" Click="btnFilterGames_Click"/>
+        <Label Content="Random spel ni kan köra" HorizontalAlignment="Left" Margin="434,197,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txbRandomSuggestedGame" HorizontalAlignment="Left" Height="23" Margin="376,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342" IsEnabled="False"/>
+        <Button x:Name="btnGenerateRandomPlayableGame"  Content="Slumpa nytt" HorizontalAlignment="Left" Margin="643,267,0,0" VerticalAlignment="Top" Width="75" Click="btnGenerateRandomPlayableGame_Click"/>
+
+    </Grid>
+</Window>
